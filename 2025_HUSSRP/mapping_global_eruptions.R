@@ -9,6 +9,6 @@ ggplot() +
              alpha=0.7) +
   scale_size(range=c(1,5), name="VEI") +
   coord_fixed(1.3) +
-  labs(title="Global Significant Volcanic Eruptions (2002-2025)",
+  labs(title="Global Significant Volcanic Eruptions (2002-2026)",
        x="Longitude", y="Latitude") +
   theme(text=element_text(family="Times New Roman"))

@@ -2,7 +2,9 @@ library(kza)
 library(WaveletComp)
 library(scorepeak)
 
-my.data2 <- data.frame(x = data$ma_sunspots)
+my.data2 <- sunspot_data |>
+  dplyr::filter(year>=1702)
+my.data2 <- data.frame(x = my.data2$ma3)
 
 my.w2 <- analyze.wavelet(my.data2, "x",
                         loess.span = 0,

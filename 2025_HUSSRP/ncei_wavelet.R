@@ -2,7 +2,9 @@ library(kza)
 library(WaveletComp)
 library(scorepeak)
 
-my.data <- data.frame(x = data$norm_eruptions)
+my.data <- eruptions_filled |>
+  dplyr::filter(YEAR>=1702)
+my.data <- data.frame(x = my.data$ma3)
 
 my.w <- analyze.wavelet(my.data, "x",
                         loess.span = 0,

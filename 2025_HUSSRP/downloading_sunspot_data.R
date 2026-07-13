@@ -2,9 +2,10 @@
 library(data.table)
 library(lubridate)
 library(tidyverse)
+library(ggplot2)
 
-# save sunspot number data in sn
-sn <- fread("http://www.sidc.be/silso/DATA/SN_y_tot_V2.0.csv", sep=";")
+# save yearly mean sunspot number data in sn
+sn <- fread("https://www.sidc.be/SILSO/INFO/snytotcsv.php", sep=";")
 
 # data.frame() creates a new data table
 sunspot_data <- data.frame(year=sn$V1,
@@ -22,4 +23,6 @@ ggplot(data=sunspot_data, aes(x=year, y=sunspots)) +
   geom_line() +
   labs(title="Average Sunspots Over Time",
        x="Year",
-       y="Sunspots")
+       y="Sunspots") +
+  theme(text=element_text(family="Times New Roman"))
+rm(sn)
