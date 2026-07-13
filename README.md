@@ -13,4 +13,4 @@ BBmisc (normalization) <br>
 kza (moving average) <br>
 WaveletComp (wavelet) <br>
 scorepeak (wavelet) <br>
-zoo (indexing) <br>
+zoo (moving average) <br>
